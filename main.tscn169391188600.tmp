@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dcydvs1qdue5e"]
+
+[ext_resource type="TileSet" uid="uid://cbmhqkv62r27w" path="res://tilemap/tiles/tileset.tres" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://c4gs5ambg6v7e" path="res://tilemap/tilemap_editor.gd" id="2_h2yge"]
+[ext_resource type="Resource" uid="uid://cc1gsv4qq5yn3" path="res://tilemap/tiles/tile_manager.tres" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dw2ii20enyqyj" path="res://game_ui/UI.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://ro07wpmaras" path="res://items/item_manager.gd" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bg7t3fm0ne8ej" path="res://items/item.tscn" id="5_7mycd"]
+
+[node name="Node2D" type="Node2D" unique_id=1638878555]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1233689417]
+tile_set = ExtResource("1_0xm2m")
+
+[node name="TileEditor" type="Node2D" parent="TileMapLayer" unique_id=397894169 node_paths=PackedStringArray("tilemap")]
+script = ExtResource("2_h2yge")
+tilemap = NodePath("..")
+tile_manager = ExtResource("3_h2yge")
+
+[node name="ItemManager" type="Node2D" parent="TileMapLayer" unique_id=1294818521 node_paths=PackedStringArray("tilemap")]
+script = ExtResource("4_lquwl")
+tilemap = NodePath("..")
+tile_manager = ExtResource("3_h2yge")
+item_scene = ExtResource("5_7mycd")
+
+[node name="CanvasLayer" parent="." unique_id=91359172 instance=ExtResource("4_1bvp3")]

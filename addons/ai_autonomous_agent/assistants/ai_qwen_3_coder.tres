@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AIAssistantResource" format=3 uid="uid://hglppd1nvu1b"]
+
+[ext_resource type="Resource" uid="uid://c0xq2vafep0gu" path="res://addons/ai_autonomous_agent/llm_providers/ollama.tres" id="1_nuhhm"]
+[ext_resource type="Script" uid="uid://bi0d7x7jkgql8" path="res://addons/ai_autonomous_agent/assistants/ai_assistant_resource.gd" id="2_3l40i"]
+
+[resource]
+script = ExtResource("2_3l40i")
+type_name = "Qwen 3 Coder"
+ai_model = "qwen3-coder-30b-a3b-instruct:latest"
+llm_provider = ExtResource("1_nuhhm")
+ai_description = "You are an autonomous GDScript programming agent for Godot 4.7. Execute all possible steps to complete the orders given to you. You prefer tabs for indentation and statically typed variables. You strive to maintain code style and work within existing systems."
+max_autonomous_steps = 25

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dw2ii20enyqyj"]
+
+[ext_resource type="Script" uid="uid://bppoagu05y2i8" path="res://game_ui/inventory.gd" id="1_f2d2j"]
+[ext_resource type="PackedScene" uid="uid://d1vs2133fo8fp" path="res://game_ui/inventory_button.tscn" id="1_nps4n"]
+[ext_resource type="Resource" uid="uid://cc1gsv4qq5yn3" path="res://tilemap/tiles/tile_manager.tres" id="2_ybuf2"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=91359172]
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=833394455]
+custom_minimum_size = Vector2(250, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("1_f2d2j")
+tile_manager = ExtResource("2_ybuf2")
+button_scene = ExtResource("1_nps4n")

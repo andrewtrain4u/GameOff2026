@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d1vs2133fo8fp"]
+
+[ext_resource type="Script" uid="uid://dfq6ykp7abdna" path="res://game_ui/inventory_button.gd" id="1_du080"]
+[ext_resource type="Resource" uid="uid://cc1gsv4qq5yn3" path="res://tilemap/tiles/tile_manager.tres" id="2_6ug3p"]
+
+[node name="Button" type="Button" unique_id=1485457443]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_du080")
+tile_manager = ExtResource("2_6ug3p")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

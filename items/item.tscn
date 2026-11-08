@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bg7t3fm0ne8ej"]
+
+[ext_resource type="Script" uid="uid://0or08npuyyft" path="res://items/item.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://ckhg8jlk8bgy6" path="res://items/letter_tile.svg" id="3_cd4ji"]
+[ext_resource type="FontFile" uid="uid://rew66uybrcqv" path="res://game_ui/fonts/Interstate-Bold Square.ttf" id="4_88lpn"]
+[ext_resource type="Texture2D" uid="uid://ckxs3fsktcc1o" path="res://icon.svg" id="4_cd4ji"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ostoq"]
+texture = ExtResource("3_cd4ji")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajtct"]
+font = ExtResource("4_88lpn")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
+
+[node name="Item" type="Label" unique_id=1333408316]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -41.0
+offset_bottom = -322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ostoq")
+text = "Hello World!"
+label_settings = SubResource("LabelSettings_ajtct")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_item")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1147443155]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_cd4ji")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TileManager" format=3 uid="uid://cc1gsv4qq5yn3"]
+
+[ext_resource type="Script" uid="uid://7nlto5p2krft" path="res://tilemap/tiles/tile_manager.gd" id="1_511a4"]
+
+[resource]
+script = ExtResource("1_511a4")
+metadata/_custom_type_script = "uid://7nlto5p2krft"
